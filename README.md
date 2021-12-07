@@ -19,7 +19,7 @@ Where
 * **targetHost** - the target IP address 
 * **targetPorts** - the target ports
 
-* **-d** - the Delay between each port knock
+* **-d** - the delay between each port knock
 
 ## Contributing
 
