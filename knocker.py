@@ -13,7 +13,7 @@ print(authorSignature)
 
 ## parse arguments 
 parser = argparse.ArgumentParser(description='Knocker.py is an easy port knocking service', 
-                                 epilog='--- Knocker.py - Moritz Nentwig ----------', add_help=True)
+                                 epilog='--- Knocker.py - Moritz Nentwig --------', add_help=True)
 parser.add_argument('targetHost', help='target IP address')
 parser.add_argument('targetPorts', type=int, nargs='+', help='target ports to knock')
 parser.add_argument('-d', '--delay', type=int, default=500, help='delay between each port knock in milliseconds')
