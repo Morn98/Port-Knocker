@@ -2,10 +2,36 @@
 
 import argparse
 import socket
+import time
 
 authorSignature = 'Knocker.py - Published by Moritz Nentwig\n'
 authorSignature += '----------------------------------------'
 
+## knock the ports
+def func(args):
+
+    for port in args.targetPorts:
+        
+        # create an INET, STREAMing socket (TCP)
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+        s.setblocking(False)
+
+        try:
+
+            print("[+] Knocking at port: " + str(port))
+
+            # now connect to the server on port xxx 
+            s.connect((args.targetHost, port))
+
+        except socket.error:
+
+            pass
+        
+        # sleep between each knock
+        time.sleep(args.delay/1000)
+    
+    print("[+] Done")
 
 ## print header first 
 print("")
@@ -23,3 +49,5 @@ args = parser.parse_args()
 print("[+] Targethost: " + args.targetHost)
 print("[+] TargetPorts: " + ' '.join(map(str, args.targetPorts)))
 print("[+] Delay: " + str(args.delay) + " milliseconds")
+
+func(args)
