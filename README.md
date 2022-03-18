@@ -1,6 +1,6 @@
 # Port-Knocker
 
-Building my own Port-Knocker. 
+Building my own Port-Knocker. To knock on ports in CTF challenges.
 
 ## Build with 
 
